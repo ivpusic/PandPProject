@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_PandPDomainServicesoap" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc/soap"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_PandPDomainServicesoap"
+                contract="PandPNameSpace.PandPDomainServicesoap" name="BasicHttpBinding_PandPDomainServicesoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

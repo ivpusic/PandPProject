@@ -1,0 +1,13 @@
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\ApplicationIcon.png
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\Background.png
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\PandPMobileApp.dll
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\PandPMobileApp.pdb
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\AppManifest.xaml
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\Bin\Debug\PandPMobileApp.xap
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\App.g.i.cs
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\MainPage.g.i.cs
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\PandPMobileApp.g.resources
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\PandPMobileApp.dll
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\PandPMobileApp.pdb
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPMobileApp\obj\Debug\XapCacheFile.xml

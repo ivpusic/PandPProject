@@ -1,0 +1,3 @@
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject
+Generated_Code\PandPproject.Web.g.cs
+Generated_Code\Models\Shared\User.shared.cs

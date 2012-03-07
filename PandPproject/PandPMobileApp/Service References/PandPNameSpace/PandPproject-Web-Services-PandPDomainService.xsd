@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="DomainServices" elementFormDefault="qualified" targetNamespace="DomainServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" />
+  <xs:complexType name="QueryResultOfMembers">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}" Namespace="DomainServices" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Members" Namespace="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryResult">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IncludedResults" nillable="true" type="q1:ArrayOfanyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" minOccurs="0" name="RootResults" nillable="true" type="q2:ArrayOfMembers">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryResultOfMembers" nillable="true" type="tns:QueryResultOfMembers" />
+  <xs:complexType name="QueryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalCount" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResult" nillable="true" type="tns:QueryResult" />
+  <xs:complexType name="DomainServiceFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDomainException" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OperationErrors" nillable="true" type="tns:ArrayOfValidationResultInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainServiceFault" nillable="true" type="tns:DomainServiceFault" />
+  <xs:complexType name="ArrayOfValidationResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResultInfo" nillable="true" type="tns:ValidationResultInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResultInfo" nillable="true" type="tns:ArrayOfValidationResultInfo" />
+  <xs:complexType name="ValidationResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SourceMemberNames" nillable="true" type="q3:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationResultInfo" nillable="true" type="tns:ValidationResultInfo" />
+  <xs:complexType name="QueryResultOfsysdiagrams">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}" Namespace="DomainServices" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="sysdiagrams" Namespace="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryResult">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IncludedResults" nillable="true" type="q4:ArrayOfanyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" minOccurs="0" name="RootResults" nillable="true" type="q5:ArrayOfsysdiagrams">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryResultOfsysdiagrams" nillable="true" type="tns:QueryResultOfsysdiagrams" />
+  <xs:complexType name="QueryResultOfTraffic">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}" Namespace="DomainServices" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Traffic" Namespace="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryResult">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IncludedResults" nillable="true" type="q6:ArrayOfanyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" minOccurs="0" name="RootResults" nillable="true" type="q7:ArrayOfTraffic">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryResultOfTraffic" nillable="true" type="tns:QueryResultOfTraffic" />
+  <xs:complexType name="ArrayOfChangeSetEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChangeSetEntry" nillable="true" type="tns:ChangeSetEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChangeSetEntry" nillable="true" type="tns:ArrayOfChangeSetEntry" />
+  <xs:complexType name="ChangeSetEntry">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Associations" nillable="true" type="q8:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ConflictMembers" nillable="true" type="q9:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EntityActions" nillable="true" type="q10:ArrayOfKeyValueOfstringArrayOfanyTypety7Ep6D1" />
+      <xs:element minOccurs="0" name="HasMemberChanges" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleteConflict" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Operation" type="tns:DomainOperation" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OriginalAssociations" nillable="true" type="q11:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OriginalEntity" nillable="true" type="xs:anyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StoreEntity" nillable="true" type="xs:anyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ValidationErrors" nillable="true" type="tns:ArrayOfValidationResultInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChangeSetEntry" nillable="true" type="tns:ChangeSetEntry" />
+  <xs:simpleType name="DomainOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Query" />
+      <xs:enumeration value="Insert" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="Invoke" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DomainOperation" nillable="true" type="tns:DomainOperation" />
+</xs:schema>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PandPDomainService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd3" namespace="DomainServices" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/PandPproject.Web.Models" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PandPDomainServicesoap_GetMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembers" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetMembers_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q1="DomainServices" name="detail" element="q1:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetSysdiagrams_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysdiagrams" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetSysdiagrams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysdiagramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetSysdiagrams_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q2="DomainServices" name="detail" element="q2:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetTraffic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTraffic" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetTraffic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficResponse" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_GetTraffic_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q3="DomainServices" name="detail" element="q3:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_SubmitChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChanges" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_SubmitChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PandPDomainServicesoap_SubmitChanges_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q4="DomainServices" name="detail" element="q4:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="PandPDomainServicesoap">
+    <wsdl:operation name="GetMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetMembers" message="tns:PandPDomainServicesoap_GetMembers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetMembersResponse" message="tns:PandPDomainServicesoap_GetMembers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetMembersDomainServiceFault" name="DomainServiceFault" message="tns:PandPDomainServicesoap_GetMembers_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSysdiagrams">
+      <wsdl:input wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetSysdiagrams" message="tns:PandPDomainServicesoap_GetSysdiagrams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetSysdiagramsResponse" message="tns:PandPDomainServicesoap_GetSysdiagrams_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetSysdiagramsDomainServiceFault" name="DomainServiceFault" message="tns:PandPDomainServicesoap_GetSysdiagrams_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTraffic">
+      <wsdl:input wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetTraffic" message="tns:PandPDomainServicesoap_GetTraffic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetTrafficResponse" message="tns:PandPDomainServicesoap_GetTraffic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PandPDomainServicesoap/GetTrafficDomainServiceFault" name="DomainServiceFault" message="tns:PandPDomainServicesoap_GetTraffic_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/PandPDomainServicesoap/SubmitChanges" message="tns:PandPDomainServicesoap_SubmitChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PandPDomainServicesoap/SubmitChangesResponse" message="tns:PandPDomainServicesoap_SubmitChanges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PandPDomainServicesoap/SubmitChangesDomainServiceFault" name="DomainServiceFault" message="tns:PandPDomainServicesoap_SubmitChanges_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_PandPDomainServicesoap" type="tns:PandPDomainServicesoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMembers">
+      <soap:operation soapAction="http://tempuri.org/PandPDomainServicesoap/GetMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysdiagrams">
+      <soap:operation soapAction="http://tempuri.org/PandPDomainServicesoap/GetSysdiagrams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraffic">
+      <soap:operation soapAction="http://tempuri.org/PandPDomainServicesoap/GetTraffic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <soap:operation soapAction="http://tempuri.org/PandPDomainServicesoap/SubmitChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PandPDomainService">
+    <wsdl:port name="BasicHttpBinding_PandPDomainServicesoap" binding="tns:BasicHttpBinding_PandPDomainServicesoap">
+      <soap:address location="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

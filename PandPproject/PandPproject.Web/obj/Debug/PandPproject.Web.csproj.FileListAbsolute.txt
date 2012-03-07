@@ -1,0 +1,11 @@
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\bin\PandPproject.Web.dll
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\bin\PandPproject.Web.pdb
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\PandPproject.Web.Resources.ValidationErrorResources.resources
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\PandPproject.Web.Resources.RegistrationDataResources.resources
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\PandPproject.Web.dll
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\obj\Debug\PandPproject.Web.pdb
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\bin\Microsoft.ServiceModel.DomainServices.Hosting.dll
+C:\Users\Ivan\Desktop\seminar baze\PandPproject\PandPproject.Web\bin\Microsoft.ServiceModel.DomainServices.Hosting.xml

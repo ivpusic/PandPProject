@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52878/Services/PandPproject-Web-Services-PandPDomainService.svc?xsd=xsd3" namespace="DomainServices" />
+  <xs:element name="GetMembers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="DomainServices" minOccurs="0" name="GetMembersResult" nillable="true" type="q1:QueryResultOfMembers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysdiagrams">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysdiagramsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="DomainServices" minOccurs="0" name="GetSysdiagramsResult" nillable="true" type="q2:QueryResultOfsysdiagrams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTraffic">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrafficResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="DomainServices" minOccurs="0" name="GetTrafficResult" nillable="true" type="q3:QueryResultOfTraffic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="DomainServices" minOccurs="0" name="changeSet" nillable="true" type="q4:ArrayOfChangeSetEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="DomainServices" minOccurs="0" name="SubmitChangesResult" nillable="true" type="q5:ArrayOfChangeSetEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
